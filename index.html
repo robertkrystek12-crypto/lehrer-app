@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- viewport-fit=cover, damit die installierte App die Randbereiche des iPads nutzt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>Lehrer-App</title>
+    <meta name="description" content="Notendokumentation und Kursbuch — verschlüsselt auf dem eigenen Gerät" />
+
+    <!-- Installation auf dem Home-Bildschirm (iPadOS/iOS) -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Lehrer-App" />
+    <meta name="theme-color" content="#3730a3" />
+
+    <!--
+      Die Content-Security-Policy wird beim Bauen hier eingesetzt (siehe
+      vite.config.ts). Sie verbietet jede Verbindung zu fremden Servern: selbst
+      wenn über eine Abhängigkeit Schadcode hineinkäme, hätte er keinen Kanal,
+      um Noten oder Namen abfließen zu lassen. Im Entwicklungsmodus bleibt sie
+      außen vor, weil der Vite-Dev-Server dort Inline-Skripte einsetzt.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'" />
+    <meta name="referrer" content="no-referrer" />
+    <script type="module" crossorigin src="./assets/index-Bh6WaMBG.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-OXU4n4sl.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
